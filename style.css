@@ -1,0 +1,233 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: 1.5s;
+}
+.ex-1-square:hover{
+    background-color: red;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: ease-in-out 2s;
+}
+.ex-2-square:active{
+    width: 1000px;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: ease-in-out 2s;
+}
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: ease-in-out 2s;
+}
+.ex-4-square:hover{
+    background: none;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transition: ease-in-out 2s;
+}
+.ex-5-square:hover{
+    width: 160px;
+    height: 160px;
+}
+.ex-5-square:active{
+    width: 30px;
+    height: 30px;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+.ex-7-img{
+    transition: ease-in-out 2s;
+}
+.ex-8-img{
+    transition: ease-in-out 2s;
+}
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+.ex-7-img:hover{
+    filter: sepia(0.7);
+    filter: brightness(0.5);
+}
+.ex-8-img:hover{
+    filter: sepia(0.7);
+    filter: brightness(0.5);
+    border-radius: 30px;
+}
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+    transition: ease-in-out 2s;
+}
+.ex-9-img:hover{
+    filter: sepia(0.7);
+    filter: brightness(0.5);
+    border-radius: 30px;
+    width: 800px;
+}
+.ex-10-icon {
+    font-size: 60px;
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-11-icon:hover {
+    animation-name: weirdRotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+.ex-12-top-white{
+    animation: partialMove-top 2s linear infinite alternate-reverse;
+}
+
+.ex-12-bottom-white{
+    animation: partialMove-bottom 2s linear infinite alternate-reverse;
+}
+
+.ex-13-top-white{
+    animation: totalMove-top 2s linear infinite;
+}
+
+.ex-13-bottom-white{
+    animation: totalMove-bottom 2s linear infinite;
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes weirdRotation{
+    0%{
+        transform: rotate(0);
+    }
+    80%{
+        transform: rotate(280deg);
+    }
+    0%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes partialMove-top{
+    0%{
+        left: 10%;
+    }
+
+    100%{
+        left: 60%;
+    }
+}
+
+@keyframes partialMove-bottom{
+    0%{
+        right: 10%;
+    }
+
+    100%{
+        right: 60%;
+    }
+}
+
+@keyframes totalMove-top{
+    0%{
+        left: -20px;
+        top: -10px;
+    }
+    30%{
+        left: 80%;
+        top: -10px;
+    }
+    60%{
+        left: 80%;
+        top: 60px;
+    }
+    80%{
+        left: -20px;
+        top: 60px;
+    }
+    100%{
+        left: -20px;
+        top: -10px;
+    }
+}
+
+
+@keyframes totalMove-bottom{
+    0%{
+        right: -20px;
+        bottom: -10px;
+    }
+    30%{
+        right: 80%;
+        bottom: -10px;
+    }
+    60%{
+        right: 80%;
+        bottom: 60px;
+    }
+    80%{
+        right: -20px;
+        bottom: 60px;
+    }
+    100%{
+        right: -20px;
+        bottom: -10px;
+    }
+}
